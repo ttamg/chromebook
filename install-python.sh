@@ -1,19 +1,17 @@
 #!/bin/bash
 set -e
 
-echo "A script to install Python 3.7 on a Chromebook"
+echo "A script to install Python on a Chromebook"
 echo
 echo "This will:"
-echo "1. Install prerequisites "
-echo "2. create a new python 3 virtual environment in that folder"
-echo "3. install Jupyter Lab files in that folder"
-echo "4. add a readme file in the project folder with instructions"
+echo "1. Install prerequisites needed for Python on a typical Chromebook"
+echo "2. Install Python 3 version that you choose"
 echo
 echo "Use this script at your own risk.  It may not work on all Chromebooks or setups."
 echo "This has been tested on a clean powerwashed Google Pixelbook."
 echo "If a step fails, the script will stop."
 echo
-read -p "Press return to continue ... or Ctrl-C to cancel." START
+read -p "Press Enter to continue ... or Ctrl-C to cancel." START
 echo
 
 echo "Python versions I can install:"
@@ -57,8 +55,9 @@ case $CHOICE in
 esac
 
 echo
-echo "Will compile Python $RELEASE from the source-code ..."
+echo "I will compile Python $RELEASE from the source-code."
 
+echo
 read -n 1 -p "Are you really sure you want to continue?  (Y/y): " CONFIRM
 echo
 if [ $CONFIRM != "Y" ] && [ $CONFIRM != "y" ]

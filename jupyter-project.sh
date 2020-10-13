@@ -14,7 +14,7 @@ echo
 echo "Use this script at your own risk.  It may not work on all Chromebooks or setups."
 echo "This has been tested on a clean powerwashed Google Pixelbook."
 echo 
-read -p "Press return to continue ... or Ctrl-C to cancel." START
+read -p "Press Enter to continue ... or Ctrl-C to cancel." START
 
 PWD=$(pwd)
 echo
