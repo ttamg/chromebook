@@ -1,6 +1,7 @@
 #!/bin/bash
 
 cat << EOF
+
 This is a script to show if Python, pip and virtualenv are installed.
 
 This will:

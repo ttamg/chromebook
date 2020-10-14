@@ -2,6 +2,7 @@
 set -e
 
 cat << EOF
+
 This is a script to install PIP and Virtualenv for Python on the Chromebook.
 It may work on other Debian Linux systems too.
 

@@ -2,6 +2,7 @@
 set -e
 
 cat << EOF
+
 This is a script to install Python on a Chromebook.
 It may work on other Debian Linux systems too.
 
