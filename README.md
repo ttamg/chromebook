@@ -24,6 +24,8 @@ One of the best things about Chromebooks is the ability to do a 'powerwash' whic
 
 Powerwash will completely wipe everything in the Linux machine in your chromebook, so you will have to reinstall Python and other tools.  Doing this manually and looking up all the install commands takes time, and is daunting for those not happy on the Linux command line.  The scripts below were written to make that process faster and a bit more accessible for Chromebook users who might want to explore programming with Python in particular.
 
+I recommend after a Powerwash that the first thing you do is go into the 'Settings / About Chrome' and do an upgrade to the latest version before reinstalling the Linux terminal.
+
 
 ## Python installation
 
