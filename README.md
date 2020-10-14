@@ -1,40 +1,131 @@
 # Chromebook scripts for quick python setup
 
-Do you want to set up your Chromebook for Python development faster after a powerwash?
+*Are you new to Python and want to try some coding on your Chromebook?*
 
-Are you new to Python and want to do some development on your Chromebook?
+*Do you want to a faster way to install Python after powerwashing your Chromebook?*
 
-... if so then these scripts may be useful timesavers.
+Installing it manually is a bit of a hassle and is daunting for people not used to Linux installs. 
 
-## A warning
+These scripts were developed to make it quick and easy to install Python, Docker and various other dev tools on a clean Chromebook.
 
-You use these scripts at your own risk. They are tested on my Google Pixelbook and work nice and quickly after a clean powerwash (that wipes the Chromebook). They may or may not work on all Chromebooks.
 
-## Scripts
+## A health warning
 
-### Installing latest Python 3 on the Chromebook
+You use these scripts at your own risk. They are tested on my Google Pixelbook and work cleanly after a powerwash (that wipes the Chromebook). They may or may not work on all Chromebooks.
 
-This is quite a time-consuming task. My chromebook comes with Python 3.5 as standard. This is now getting a bit out of date.
+Tested on Chrome OS versions:
+- Version 85.0.4183.133
+- Version 86.0.4240.77
 
-### Starting a new Python project and creating a Virtual Environment
 
-A single script to create a new virtual environment, and project folder for a new Python project
+## Powerwash on Chromebooks
 
-```bash
-    ./python-project.sh
-```
+One of the best things about Chromebooks is the ability to do a 'powerwash' which takes only 2-3 minutes and leaves you with a clean new Chromebook.  So if everything goes wrong on installs or you get lots of instability or crashes, you can use powerwash to start with a clean slate.
+
+Powerwash will completely wipe everything in the Linux machine in your chromebook, so you will have to reinstall Python and other tools.  Doing this manually and looking up all the install commands takes time, and is daunting for those not happy on the Linux command line.  The scripts below were written to make that process faster and a bit more accessible for Chromebook users who might want to explore programming with Python in particular.
+
+
+## Python installation
+
+### 1. Getting started 
+
+In your Linux terminal on your Chromebook, get the scripts by cloning the repository:
+
+    git clone https://github.com/ttamg/chromebook
+
+This will copy the files into a new *chromebook* directory.
+
+INSERT GIF
+
+
+### 2. Installing Python3
+
+the `install-python.sh` script will install a Python 3 version on your Chromebook.  You can have multiple versions installed at the same time if you like.
+
+From the *chromebook* folder, run the script and follow the prompts:
+
+    ./install-python.sh
+
+
+### 3. Installing pip and virtualenv
+
+There is a separate script to install pip, and virtualenv, that you will need.  This is separate because you only need to install these once, but you might use the *install-python* script multiple times to install multiple versions (if you are keen!).
+
+From the *chromebook* folder:
+
+    ./install-pip-virtualenv.sh
+
+You should now have a working Python installation and can get coding.  See the project **start scripts**.
+
+
+## Start scripts
+
+These are simple scripts that create new Python or Jupyter projects
+
+### Start new Python project
+
+Starting a new Python project involves creating a new project folder, creating a new virtual environment for you to install Python packages using pip, and then getting started.  It's not hard, but a bit fiddly if you don't do it week in and week out.
+
+The *start-python-project* script automates this:
+
+From the *chromebook* folder:
+
+    ./start-python-project.sh
 
 ADD GIF
 
-### Jupyter Notebook projects
 
-Chromebooks work pretty well for Jupyter projects. This short script sets up a new project folder
+### Start a new Jupyter project
 
-### Post-Powerwash reinstall
+If you want to use Jupyter notebooks to create some Python code or run some data science analysis, then Jupyter runs well on the Chromebook.
 
-Reinstalling Python and other development tools after a Powerwash takes some time. These scripts make this very quick on my machine.
+The *start-jupyter-project* script creates a new Python project and virtual environment, and then install Jupyter Lab for you.
 
-** Warning - some of these installations are at a more basic level so it is possible that they will not work on all Chromebooks. This has been tested on a Google Pixelbook**
+From the *chromebook* folder:
+
+    ./start-jupyter-project.sh
+
+ADD GIF
+![](images/test.gif)
+
+## Other developer installation scripts
+
+These scripts are more for those who are probably doing a more serious development project and need these industrial tools.
+
+
+### Install SQLite
+
+From the command line just use the normal installation command:
+
+    sudo apt-get install sqlite3
+
+
+### Install Docker
+
+Docker can be quite resource hungry so it may not work well, or at all, on low-end Chromebooks.
+
+This script installs the Docker dependences, Docker and runs the test container to confirm installation worked.
+
+From the *chromebook* folder:
+
+    ./install-docker.sh
+
+
+### Install Postgres
+
+If you want a local Postgres 
+
+CONTINUE
+
+
+
+## Contributors
+
+If you find some bugs in the scripts or updates that should be made, please raise an issue or (better still) PR. I can't promise to fix everything, but would like this to be a resource that helps people, particularly those new to Python.
+
+
+If we find there are compatibility issues between different Chromebooks and versions then we may need to add different versions of the scripts.  
+
 
 ## Finally
 
