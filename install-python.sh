@@ -14,6 +14,7 @@ It will not install pip and virtualenv.  There is a separate script to do that.
 Warning - Use this script at your own risk.  It may not work on all Chromebooks or setups.
 This has been tested on a clean powerwashed Google Pixelbook.
 If a step fails, the script will stop.
+
 EOF
 
 read -p "Press Enter to continue ... or Ctrl-C to cancel." START
