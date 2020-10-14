@@ -1,26 +1,33 @@
-# Chromebook scripts for quick python setup
+# Chromebook - quick Python setup
 
-*Are you new to Python and want to try some coding on your Chromebook?*
+Installing Python and other developer tools on a Chromebook manually takes time and a bit of a hassle.  
 
-*Do you want to a faster way to install Python after powerwashing your Chromebook?*
+This provides **a set of scripts for installing Python on a Chromebook and creating new projects**.
 
-Installing it manually is a bit of a hassle and is daunting for people not used to Linux installs. 
 
-These scripts were developed to make it quick and easy to install Python, Docker and various other dev tools on a clean Chromebook.
+## Who is this for?
+
+* For Python beginners with a Chromebook - the Linux and Python install is a bit daunting.  Most people want to get started coding rather than spending up to an hour or more doing an install.
+
+* For myself or developers wanting to reinstall after a 'powerwash' - One of the best things about Chromebooks is the ability to do a 'powerwash' which takes only 2-3 minutes and leaves you with a clean new Chromebook. When I powerwash my Chromebook from time, I was finding it a hassle to reinstall Python each time.  These scripts are a time-saver.  
+
+Hopefully they are useful to people in the Python community.  If want to contribute, see [contributors](#contributors) below.
 
 
 ## A health warning
 
-You use these scripts at your own risk. They are tested on my Google Pixelbook and work cleanly after a powerwash (that wipes the Chromebook). They may or may not work on all Chromebooks.
+**You use these scripts at your own risk.** 
 
-Tested on Chrome OS versions:
-- Version 85.0.4183.133
-- Version 86.0.4240.77
+They are tested on a Google Pixelbook and work cleanly after a powerwash. But they may not work on all Chromebooks.
+
+> Tested on Chrome OS versions:
+> - Version 85.0.4183.133
+> - Version 86.0.4240.77
 
 
 ## Powerwash on Chromebooks
 
-One of the best things about Chromebooks is the ability to do a 'powerwash' which takes only 2-3 minutes and leaves you with a clean new Chromebook.  So if everything goes wrong on installs or you get lots of instability or crashes, you can use powerwash to start with a clean slate.
+ So if everything goes wrong on installs or you get lots of instability or crashes, you can use powerwash to start with a clean slate.
 
 Powerwash will completely wipe everything in the Linux machine in your chromebook, so you will have to reinstall Python and other tools.  Doing this manually and looking up all the install commands takes time, and is daunting for those not happy on the Linux command line.  The scripts below were written to make that process faster and a bit more accessible for Chromebook users who might want to explore programming with Python in particular.
 
@@ -29,24 +36,31 @@ I recommend after a Powerwash that the first thing you do is go into the 'Settin
 
 ## Python installation
 
-### 1. Getting started 
+### 1. Starting Chromebook Linux
+
+Start your Linux terminal window.
 
 In your Linux terminal on your Chromebook, get the scripts by cloning the repository:
 
     git clone https://github.com/ttamg/chromebook
 
-This will copy the files into a new *chromebook* directory.
+This will copy the script files into a new *chromebook* directory.
 
-INSERT GIF
+![](images/start_linux_and_clone_github.gif)
+
 
 
 ### 2. Installing Python3
 
 the `install-python.sh` script will install a Python 3 version on your Chromebook.  You can have multiple versions installed at the same time if you like.
 
-From the *chromebook* folder, run the script and follow the prompts:
+From the *chromebook* folder, run the script and say yes to the prompts:
 
     ./install-python.sh
+
+It will take 5 minutes to run, compile and install.
+
+![](images/install-python.gif)
 
 
 ### 3. Installing pip and virtualenv
@@ -74,8 +88,6 @@ From the *chromebook* folder:
 
     ./start-python-project.sh
 
-ADD GIF
-
 
 ### Start a new Jupyter project
 
@@ -87,8 +99,8 @@ From the *chromebook* folder:
 
     ./start-jupyter-project.sh
 
-ADD GIF
-![](images/test.gif)
+![](images/start-jupyter.gif)
+
 
 ## Other developer installation scripts
 
@@ -121,6 +133,7 @@ CONTINUE
 
 
 
+<a name="contributors"></a>
 ## Contributors
 
 If you find some bugs in the scripts or updates that should be made, please raise an issue or (better still) PR. I can't promise to fix everything, but would like this to be a resource that helps people, particularly those new to Python.
