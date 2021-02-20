@@ -107,6 +107,19 @@ From the *chromebook* folder:
 ![](images/start-jupyter.gif)
 
 
+## Installing Nodejs and NPM
+
+<p align="center">
+<img src="images/node.png" alt="drawing" height="100"/>
+</p>
+
+For front-end development, or back-end NodeJS, we can install NodeJS and NPM.
+
+from the *chromebook* folder:
+
+    ./install-npm.sh
+
+
 ## Other developer installation scripts
 
 These scripts are more likely to be helpful to those who are doing more serious Python development on their Chromebook and needs tools such as databases or Docker.
