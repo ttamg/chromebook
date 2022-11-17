@@ -1,5 +1,8 @@
 # Chromebook setup for Python development
 
+> Nov 2022 - This repo is no longer being maintained as the author does not have a Chromebook currently.  It may be that in some future version of ChromeOS upgrades some of the scripts will fail and need some maintenance.  If someone in the community wants to take over maintenance of this repo for the latest ChromeOS versions then that would be appreciated by users I am sure.
+
+
 **This repo provides a set of scripts for installing Python on a Chromebook and creating new projects**.
 
 Installing Python and other developer tools on a Chromebook requires some manual work and is a bit of a hassle.  These scripts simplify and speed up the install on a clean Chromebook.
